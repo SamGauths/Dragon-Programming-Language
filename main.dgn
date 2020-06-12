@@ -1,0 +1,227 @@
+select "graphic"
+select "robot"
+select "std"
+select "math"
+
+// CONSTANTS
+WINDOW_WIDTH = 640
+WINDOW_HEIGHT = 480
+SPEED = 1.3
+
+// VARIABLES
+posX = (WINDOW_WIDTH/2) - (80/2)
+posX_two = (WINDOW_WIDTH/2) - (80/2)
+posBallX = posX + (80/2) - (14/2)
+posBallY = WINDOW_HEIGHT-40
+start = 1
+up = 1
+
+randomOne = rand() * 4
+randomTwo = floor(randomOne)
+
+randomWall = rand() * 1
+rTop = -1
+r_up = -1
+l_up = -1
+r_down = -1
+l_down = -1
+
+// FUNCTIONS
+func init()
+{
+   posX = (WINDOW_WIDTH/2) - (80/2)
+   posX_two = (WINDOW_WIDTH/2) - (80/2)
+   posBallX = posX + (80/2) - (14/2)
+   posBallY = WINDOW_HEIGHT-40
+   start = 1
+   up = 1 
+}
+
+func rectangle(x,y,w,h, R,G,B)
+{
+    color(R,B,G)
+    frect(x,y,w,h)
+}
+
+func collBottomPlayer()
+{
+    if(posX < 0)
+    {
+      posX += SPEED  
+    }
+    if(posX > WINDOW_WIDTH - 80)
+    {
+      posX -= SPEED    
+    }
+}
+
+func ball()
+{
+    if(start == 1)
+    {
+        posBallX = posX + (80/2) - (14/2)
+	posBallY = WINDOW_HEIGHT-40
+    }
+    
+    if(start == 0)
+    {
+        if(up == 1)
+        {
+         posBallY -= 1 
+         
+         if(randomTwo == 0)
+         {
+             posBallX -= 2 
+         }
+         if(randomTwo == 1)
+         {
+             posBallX -= 1.5 
+         }
+         if(randomTwo == 2)
+         {
+             posBallX += 2 
+         }
+         if(randomTwo == 4)
+         {
+             posBallX += 1.5
+         }
+         
+         if(posBallX + 14 > posX_two && posBallX < posX_two + 80 && posBallY < 20 && posBallY > 14)
+         {
+             up = 0  
+             rTop = floor(randomOne)
+         }
+         if(posBallX + 14 > WINDOW_WIDTH)
+         {
+             r_up =  floor(randomWall)
+             if(r_up == 0)
+             {
+                randomTwo = 0 
+             }
+             if(r_up == 1)
+             {
+                randomTwo = 1 
+             }
+         }
+         if(posBallX < 0)
+         {
+             l_up =  floor(randomWall)
+             if(l_up == 0)
+             {
+                 randomTwo = 2
+             }
+             if(l_up == 1)
+             {
+                 randomTwo = 4 
+             }
+         }
+        }
+        if(up == 0)
+        {
+         posBallY += 1
+         
+         if(rTop == 0)
+         {
+             posBallX -= 2 
+         }
+         if(rTop == 1)
+         {
+             posBallX -= 1.5 
+         }
+         if(rTop == 2)
+         {
+             posBallX += 2 
+         }
+         if(rTop == 4)
+         {
+             posBallX += 1.5
+         }
+         
+         if(posBallX + 14 > posX && posBallX < posX + 80 && posBallY < WINDOW_HEIGHT - 10 && posBallY + 14 > WINDOW_HEIGHT - 20)
+         {
+             up = 1
+         }
+         if(posBallX + 14 > WINDOW_WIDTH)
+         {
+             r_down =  floor(randomWall)
+             if(r_down == 0)
+             {
+                rTop = 0 
+             }
+             if(r_down == 1)
+             {
+                rTop = 1 
+             }
+         }
+         if(posBallX < 0)
+         {
+             l_down =  floor(randomWall)
+             if(l_down == 0)
+             {
+                 rTop = 2
+             }
+             if(l_down == 1)
+             {
+                 rTop = 4 
+             }
+         }
+         if(posBallY > WINDOW_HEIGHT)
+         {
+             init()
+         }
+        }
+    }
+}
+
+func draw()
+{
+    rectangle(posBallX,posBallY,14,14, 255,0,0) // ball
+    rectangle(posX_two,0+10,80,10, 255,255,255) // top player
+    rectangle(posX,WINDOW_HEIGHT-20,80,10, 255,255,255) // bottom player
+}
+
+func collisions()
+{
+    collBottomPlayer() 
+}
+
+func update()
+{   
+    posX_two = posBallX - (80/2) - (14/2)
+    ball()
+    collisions()
+    repaint()
+}
+
+
+window("The Invincible Pong Player",WINDOW_WIDTH,WINDOW_HEIGHT)
+
+while(true)
+{
+    randomOne = rand() * 3
+
+    rectangle(0,0,WINDOW_WIDTH,WINDOW_HEIGHT, 0,0,0) // background
+    key = keypressed()
+    
+    if(key == VK_RIGHT)
+    {
+      posX += SPEED  // move right
+    }
+    if(key == VK_LEFT)
+    {
+      posX -= SPEED  // move left
+    }
+    if(key == VK_UP)
+    {
+        if(start = 1)
+        {
+           randomTwo = floor(randomOne)
+           start = 0
+        }
+    }
+    
+    draw()
+    delay(3)  
+    update()
+}
+
