@@ -1,0 +1,76 @@
+select "graphic"
+
+func red_bar(y)
+{
+    color(255,0,0)
+    frect(0,y,560,20)
+}
+
+func white_bar(y)
+{
+    color(255,255,255)
+    frect(0,y,560,20)
+}
+
+func blue_square()
+{
+    color(0,0,255)
+    frect(0,0,220,140)
+}
+
+func star(x, y)
+{
+    color(255,255,255)
+    frect(x,y,14,14)
+}
+
+func six_stars_line(y)
+{
+ star(8, y)
+ star(8+36, y)
+ star(8+(2*36), y)
+ star(8+(3*36), y)
+ star(8+(4*36), y)
+ star(8+(5*36), y)  
+}
+
+func five_stars_line(y)
+{
+ star(27, y)
+ star(8+(2*27), y)
+ star(8+(3*30), y)
+ star(10+(4*31), y)
+ star(10+(5*32), y)
+}
+
+
+window("US FLAG", 800, 600)
+
+red_bar(0)
+white_bar(20)
+red_bar(40)
+white_bar(60)
+red_bar(80)
+white_bar(100)
+red_bar(120)
+white_bar(140)
+red_bar(160)
+white_bar(180)
+red_bar(200)
+white_bar(220)
+red_bar(240)
+
+blue_square()
+
+six_stars_line(7)
+five_stars_line(7+14)
+six_stars_line(7+(2*14))
+five_stars_line(7+(3*14))
+six_stars_line(7+(4*14))
+five_stars_line(7+(5*14))
+six_stars_line(7+(6*14))
+five_stars_line(7+(7*14))
+six_stars_line(7+(8*14))
+
+
+
