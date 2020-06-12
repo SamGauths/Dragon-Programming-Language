@@ -1,0 +1,89 @@
+select "graphic"
+select "robot"
+
+WINDOW_WIDTH = 800
+WINDOW_HEIGHT = 450
+
+window("Canada Flag", 800, 450)
+
+// white background
+color(255,255,255)
+frect(0,0,WINDOW_WIDTH,WINDOW_HEIGHT)
+
+//red square 1
+color(255,0,0)
+frect(0,0,200,450)
+
+// red square 2
+color(255,0,0)
+frect(600,0,200,450)
+
+// ========================= Leaf =========================
+color(255,0,0)
+line(WINDOW_WIDTH/2-5,400,WINDOW_WIDTH/2+5,400)    
+   
+color(255,0,0)
+line(402,350,405,400)
+color(255,0,0)
+line(398,350,395,400)
+
+color(255,0,0)
+line(340,357,398,350)
+color(255,0,0)
+line(402,350,460,357)
+
+color(255,0,0)
+line(460,357,448,345)
+color(255,0,0)
+line(340,357,352,345)
+
+color(255,0,0)
+line(448,345,500,300)
+color(255,0,0)
+line(352,345,304,300)
+
+color(255,0,0)
+line(488,296,500,300)
+color(255,0,0)
+line(316,296,304,300)
+
+color(255,0,0)
+line(488,296,500,270)
+color(255,0,0)
+line(304,270,316,296)
+
+color(255,0,0)
+line(475,272,500,270)
+color(255,0,0)
+line(304,270,329,272)
+
+color(255,0,0)
+line(329,272,332,260)
+color(255,0,0)
+line(472,260,475,272)
+
+color(255,0,0)
+line(332,260,362,287)
+color(255,0,0)
+line(472,260,442,287)
+
+color(255,0,0)
+line(362,287,355,232)
+color(255,0,0)
+line(447,232,442,287)
+
+color(255,0,0)
+line(355,232,380,242)
+color(255,0,0)
+line(422,242,447,232)
+
+color(255,0,0)
+line(380,242,400,212)
+color(255,0,0)
+line(400,212,420,242)
+// ========================================================
+
+showln "Hello from Canada!!!"
+
+
+
