@@ -1,0 +1,176 @@
+select "graphic"
+select "robot"
+select "std"
+select "math"
+select "GUI"
+
+message("Dragon TIC TACT TOE\n Made by Samuel Gauthier")
+
+WINDOW_WIDTH = 800
+WINDOW_HEIGHT = 450
+RED = 1
+BLUE = 2
+
+loop = true
+k = 0 i = 0 num = 0 
+
+arr = [0,0,0,0,0,0,0,0,0,0,0]
+init = 0
+
+window("TIC TAC TOE", 400, 400)
+
+func rectangle(x,y,w,h, R,G,B)
+{
+    color(R,B,G)
+    frect(x,y,w,h)
+}
+
+func onclick_increment(n)
+{
+    if(arr[n] == 0) {
+      if(num % 2 == 0) {
+          arr[n] = 1   
+      }
+      else {
+          arr[n] = 2   
+      }
+      k = n
+      if(i == 0) {
+         num += 1
+         i += 1
+      }
+    }
+}
+
+func draw_rect(x,y,w,h)
+{
+      if(num % 2 == 0) {
+           rectangle(x,y,w,h, 0,255,0)  
+      }
+      else {
+           rectangle(x,y,w,h, 255,0,0)  
+      }
+}
+
+func win_message(winner)
+{
+    clear_game()
+    if(winner == RED)
+   	 message("RED WINS!")
+    if(winner == BLUE)
+   	 message("BLUE WINS!")
+    loop = false
+}
+
+func clear_game()
+{
+    init = 0
+
+    while(init < 10)
+    {
+    arr[init] = 0
+    init += 1
+    }
+}
+
+// White background
+color(0,0,0)
+frect(0,0,WINDOW_WIDTH,WINDOW_HEIGHT)
+// Vertical 1
+color(255,255,255)
+frect(128,0,10,WINDOW_HEIGHT)
+// Vertical 2
+color(255,255,255)
+frect(261,0,10,WINDOW_HEIGHT)
+// Horizontal 1
+color(255,255,255)
+frect(0,128,WINDOW_WIDTH,10)
+// Horizontal 2
+color(255,255,255)
+frect(0,261,WINDOW_WIDTH,10)
+
+while(loop)
+{
+    key = keypressed()
+    
+    if(key == 97)
+      onclick_increment(1)      
+    if(key == 98)
+      onclick_increment(2)
+    if(key == 99)
+      onclick_increment(3)
+    if(key == 100)
+      onclick_increment(4)
+    if(key == 101)
+      onclick_increment(5)
+    if(key == 102)
+      onclick_increment(6)
+    if(key == 103)
+      onclick_increment(7)
+    if(key == 104)
+      onclick_increment(8)
+    if(key == 105)
+      onclick_increment(9)
+    if(key == -1)
+      i = 0
+    
+    if(k == 1)
+      draw_rect(14,285,100,100)  
+    if(k == 2)
+      draw_rect(149,285,100,100)  
+    if(k == 3)
+      draw_rect(285,285,100,100)  
+    if(k == 4)
+      draw_rect(14,149,100,100)  
+    if(k == 5)
+      draw_rect(149,149,100,100)  
+    if(k == 6)
+      draw_rect(285,149,100,100)  
+    if(k == 7)
+      draw_rect(14,14,100,100)    
+    if(k == 8)
+      draw_rect(149,14,100,100)   
+    if(k == 9)
+      draw_rect(285,14,100,100)    
+    
+    // Horizontal win
+    if((arr[1] == RED && arr[2] == RED && arr[3] == RED))
+    	win_message(RED)
+    if((arr[4] == RED && arr[5] == RED && arr[6] == RED))
+    	win_message(RED)
+    if((arr[7] == RED && arr[8] == RED && arr[9] == RED))
+    	win_message(RED)
+    if(arr[1] == BLUE && arr[2] == BLUE && arr[3] == BLUE)
+    	win_message(BLUE)
+    if(arr[4] == BLUE && arr[5] == BLUE && arr[6] == BLUE)
+    	win_message(BLUE)
+    if(arr[7] == BLUE && arr[8] == BLUE && arr[9] == BLUE)
+    	win_message(BLUE)
+    
+    // Vertical win 	
+    if((arr[1] == RED && arr[4] == RED && arr[7] == RED))
+    	win_message(RED)
+    if((arr[2] == RED && arr[5] == RED && arr[8] == RED))
+    	win_message(RED)
+    if((arr[3] == RED && arr[6] == RED && arr[9] == RED))
+    	win_message(RED)
+    if(arr[1] == BLUE && arr[4] == BLUE && arr[7] == BLUE)
+    	win_message(BLUE)
+    if(arr[2] == BLUE && arr[5] == BLUE && arr[8] == BLUE)
+    	win_message(BLUE)
+    if(arr[3] == BLUE && arr[6] == BLUE && arr[9] == BLUE)
+    	win_message(BLUE)
+    	
+    // Diagonal win
+    if((arr[1] == RED && arr[5] == RED && arr[9] == RED))
+    	win_message(RED)
+    if(arr[1] == BLUE && arr[5] == BLUE && arr[9] == BLUE)
+    	win_message(BLUE)
+    if((arr[3] == RED && arr[5] == RED && arr[7] == RED))
+    	win_message(RED)
+    if(arr[3] == BLUE && arr[5] == BLUE && arr[7] == BLUE)
+    	win_message(BLUE)
+    	
+    delay(3)
+    repaint()
+}
