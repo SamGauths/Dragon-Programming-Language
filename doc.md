@@ -2,7 +2,17 @@
 
 ## Documentation
 
-### 1. Variables
+In Dragon, comments are ignored during the execution of the program. They do nothing, they are only used make the code easier to understand.
+### 1. Comments
+```
+// One line comment
+
+/* This is a 
+   multiline
+   comment */
+```
+
+### 2. Variables
 ```
 a = 10  // integer
 b = 2.09  // foat (deciaml number)
