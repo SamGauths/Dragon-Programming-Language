@@ -2,8 +2,8 @@
 
 ## Documentation
 
-In Dragon, comments are ignored during the execution of the program. They do nothing, they are only used make the code easier to understand.
 ### 1. Comments
+In Dragon, comments are ignored during the execution of the program. They do nothing, they are only used make the code easier to understand.
 ```
 // One line comment
 
@@ -11,6 +11,7 @@ In Dragon, comments are ignored during the execution of the program. They do not
    multiline
    comment */
 ```
+
 
 ### 2. Variables
 Here are the main types of variables in Dragon: integers, floats (decimal numbers), strings (text) and boolean (true or false).
@@ -21,6 +22,7 @@ b = 2.09  // foat (deciaml number)
 c = "Hello World!"  // character string
 d = true  // Boolean (true or false)
 ```
+
 
 ### 3. Input/Output
 
@@ -51,3 +53,7 @@ showln x
 ```
 This simple 3 lines program ask the user to enter something and then prints what has been entered by the user.
 Ps: Don't forget to add the __std__ module. This module contains many standard functions like __readln()__.
+
+
+### 4. Conditions
+
