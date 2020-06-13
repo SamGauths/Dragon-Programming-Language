@@ -71,3 +71,25 @@ else
 }
 // Output: "That is true!"
 ```
+
+```
+age = 101
+
+if(age > 21 && age < 100)
+{
+    showln "You are an adult"
+} 
+else if(age == 21)
+{
+    showln "You are a young adult"
+}
+else if(age <= 21 && age > 0)
+{
+    showln "You are a kid"
+}
+else
+{
+    showln "I think you are lying"
+}
+// In this case the output will be: "I think you are lying"
+```
