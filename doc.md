@@ -30,3 +30,14 @@ show "Hello World"
 // This will output "Hello World!"
 ```
 You can use also use __showln__. It will add a line-return at the end of the text.
+
+Now lets say you want to print the value of a variable. You simply have to write the name of your variable beside the command __show__:
+```
+a = 420
+b = 69.96
+c = "Hello There!"
+
+showln a   // 420
+showln b   // 69.96
+showln c   // "Hello There!"
+```
