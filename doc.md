@@ -57,3 +57,17 @@ Ps: Don't forget to add the __std__ module. This module contains many standard f
 
 ### 4. Conditions
 
+Conditions in Dragon are pretty straightfoward. Here are some examples:
+```
+age = true
+
+if(age)
+{
+    showln "That is true!"
+} 
+else
+{
+    showln "That is false!"
+}
+// Output: "That is true!"
+```
