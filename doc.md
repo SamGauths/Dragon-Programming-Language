@@ -21,3 +21,12 @@ b = 2.09  // foat (deciaml number)
 c = "Hello World!"  // character string
 d = true  // Boolean (true or false)
 ```
+
+### 3. Input/Output
+
+In Dragon, if you want to print a text in the console you don't even need to add a library. You simply need to use the command __show__ or __showln__:
+```
+show "Hello World"
+// This will output "Hello World!"
+```
+You can use also use __showln__. It will add a line-return at the end of the text.
