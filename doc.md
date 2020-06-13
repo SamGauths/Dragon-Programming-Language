@@ -41,3 +41,13 @@ showln a   // 420
 showln b   // 69.96
 showln c   // "Hello There!"
 ```
+
+If you want your program to take an input it is also very simple.
+```
+select "std"
+
+x = readln()
+showln x
+```
+This simple 3 lines program ask the user to enter something and then prints what has been entered by the user.
+Ps: Don't forget to add the __std__ module. This module contains many standard functions like __readln()__.
