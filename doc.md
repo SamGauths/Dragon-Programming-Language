@@ -142,5 +142,5 @@ else
 In this example, Kevin can't enter the bar even if he is old because his name is Kevin.
 We can read the condition as: "if your name is not Kevin and you are 21 years old or older you can enter the bar.".  
 
-### 5. Loop
+### 5. Loops
 Loops are use to repeat a part of code many times. In Dragon there are four different types of loop: **The while loop, the for loop, the do..while loop and the foreach loop**. They basically all do the same thing but some are more appropiate in certain situations.
