@@ -93,3 +93,19 @@ else
 }
 // In this case the output will be: "I think you are lying"
 ```
+
+You can also use conditions to compare character strings. Here is an example:
+```
+name = "John Do"
+
+if(name == "John Doe")
+{
+    showln name
+}
+else
+{
+    showln "What is your name?"
+}
+// Output: "What is your name?"
+```
+This small program with not output the text of our variable _name_ because it contains the text "John Do" and not "John Doe".
