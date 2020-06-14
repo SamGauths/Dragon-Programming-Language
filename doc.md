@@ -109,7 +109,7 @@ else
 // Output: "What is your name?"
 ```
 This small program with not output the text of our variable _name_ because it contains the text "John Do" and not "John Doe".
-Here is a list of the relational operators you can use to compare values in Dragon:
+Here is a list of the **relational operators** you can use to compare values in Dragon:
 
 &gt; greater than  
 &lt; less than  
@@ -118,5 +118,9 @@ Here is a list of the relational operators you can use to compare values in Drag
 == equal to  
 != not equal  
 
+The other operators you need to know about are the **logical operators**. In Dragon there are three main logical operators. Those are AND, OR and NOT:
 
+&& AND
+|| OR
+!  NOT
 
