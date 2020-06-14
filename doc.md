@@ -111,7 +111,7 @@ else
 This small program with not output the text of our variable _name_ because it contains the text "John Do" and not "John Doe".
 Here is a list of the relational operators you can use to compare values in Dragon:
 
-> is greater than
-< is less than
->= is greater than or equal
-<= is less than or equal
+&gt; is greater than
+&lt; is less than
+&gt;= is greater than or equal
+&lt;= is less than or equal
