@@ -14,7 +14,7 @@ In Dragon, comments are ignored during the execution of the program. They do not
 
 
 ### 2. Variables
-Here are the main types of variables in Dragon: integers, floats (decimal numbers), strings (text) and boolean (true or false).
+Here are the main types of variables in Dragon: **integers, floats (decimal numbers), strings (text) and boolean (true or false)**.
 There are other data types like arrays, maps, objects and functions.
 ```
 a = 10  // integer
