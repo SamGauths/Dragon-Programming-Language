@@ -114,8 +114,9 @@ Here is a list of the relational operators you can use to compare values in Drag
 &gt; greater than  
 &lt; less than  
 &gt;= greater than or equal  
-&lt;= less than or equal
-== equal to
+&lt;= less than or equal  
+== equal to  
 != not equal  
+
 
 
