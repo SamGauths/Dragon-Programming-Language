@@ -124,4 +124,21 @@ The other operators you need to know about are the **logical operators**. In Dra
 || OR  
 !  NOT  
 
+This is how we use logical operators:
+```
+name = "Kevin"
+age = 25
+
+if(name != "Kevin" && age >= 21)
+{
+    showln "You can enter the bar."
+}
+else
+{
+    showln "Sorry, kids and people named Kevin are not allowed to enter the bar."
+}
+// Output: "Sorry, kids and people named Kevin are not allowed to enter the bar."
+```
+In this example, Kevin can't enter the bar even if he is old because his name is Kevin.
+We can read the condition as: "if your name is not Kevin and you are 21 years old or older you can enter the bar.".  
 
