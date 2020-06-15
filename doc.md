@@ -179,3 +179,22 @@ do
 }while(i < 10)
 ```
 As you can see the value of *i* is clearly not less than 10 but it prints *"Hello World!"* one time. Why? Because like I said the do...while loop runs the code first and then checks the condition so it runs the code at least one time even if the condition is false.
+
+##### for loop
+Another type of loop is the __for loop__. The __for loop__ works like the __while loop__ (it checks the condition first) but it is more adapted to this kind of situation.
+```
+i = 0
+
+for(i = 0, i < 10, i = i + 1)
+{
+    showln "Hello World!"
+}
+```
+
+Here is how a __for loop works__:
+```
+for(init variable, condition, incrementation)
+{
+    // Instructions
+}
+```
