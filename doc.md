@@ -143,17 +143,39 @@ In this example, Kevin can't enter the bar even if he is old because his name is
 We can read the condition as: "if your name is not Kevin and you are 21 years old or older you can enter the bar.".  
 
 ### 5. Loops
-Loops are use to repeat a part of code many times. In Dragon there are four different types of loop: **The while loop, the for loop, the do..while loop and the foreach loop**. They basically all do the same thing but some are more appropiate in certain situations.
+Loops are use to repeat a part of code many times. In Dragon there are four different types of loop: **The while loop, the do..while loop, the for loop and the foreach loop**. They basically all do the same thing but some are more appropiate in certain situations.
 
-##### While Loop
+##### while Loop
 ```
-
 i = 0
 
-while(i < 10)
+while(i < 10)  // parentheses not necessary
 {
     showln "Hello World!"
     i += 1
 }
 // Prints 10 times "Hello World!"
 ```
+
+##### do...while loop
+Note that the do...while loop runs the loop at least one time no matter what (even if the conditions is false). Here is the same example using a do...while loop. 
+```
+i = 0
+
+do
+{
+    showln "Hello World!"
+    i += 1
+}while(i < 10)
+```
+Now lets see what happens if we set the value of *i* to 10.
+```
+i = 10
+
+do
+{
+    showln "Hello World!"
+    i += 1
+}while(i < 10)
+```
+As you can see the value of *i* is clearly not less than 10 but it prints *"Hello World!"* one time. Why? Because like I said the do...while loop runs the code first and then checks the condition so it runs the code at least one time even if the condition is false.
