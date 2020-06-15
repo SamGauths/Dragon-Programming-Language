@@ -18,7 +18,11 @@ Once you have installed Dragon you will need to follow these steps to set it up 
    __6.__ Choose PATH and click on edit  
    __7.__ Add the directory of Dragon (C:\Program Files (x86)\Dragon\Dragon Language) by default  
    __8.__ If the path does not end by a semicolon add a semicolon and hit ok.  
+   
+Once you have done all these steps you are ready to code in Dragon. You can code with ZDragon, the IDE that comes with Dragon when you install it or your can use any text editor of your choice.
 
+If you need more ressources to get started you can refer to the official documentation here:  
+https://dragon-lang.org/Dragon.pdf  
 
 ### 1. Comments
 In Dragon, comments are ignored during the execution of the program. They do nothing, they are only used make the code easier to understand.
