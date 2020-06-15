@@ -155,4 +155,5 @@ while(i < 10)
     showln "Hello World!"
     i += 1
 }
+// Prints 10 times "Hello World!"
 ```
