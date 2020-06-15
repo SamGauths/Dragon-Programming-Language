@@ -6,8 +6,19 @@
 
 ### 0. Installation
 
-First go the the official Dragon website and download the last version of Dragon in the download section. At the moment of writing these lines (June 2020) the last version of Dragon is the version 1.9.7. 
-https://dragon-lang.org/dragon-197
+First go the the official Dragon website and download the last version of Dragon in the download section. At the moment of writing these lines (June 2020) the last version of Dragon is the version 1.9.7.  
+https://dragon-lang.org/dragon-197  
+  
+Once you have installed Dragon you will need to follow these steps to set it up (Windows):  
+   __1.__ Go to control panel  
+   __2.__ Click on system  
+   __3.__ Click advanced system settings  
+   __4.__ Click environment variables  
+   __5.__ Under "System Variables" scroll to PATH  (or Path)
+   __6.__ Choose PATH and click on edit  
+   __7.__ Add the directory of Dragon (C:\Program Files (x86)\Dragon\Dragon Language) by default  
+   __8.__ If the path does not end by a semicolon add a semicolon and hit ok.  
+
 
 ### 1. Comments
 In Dragon, comments are ignored during the execution of the program. They do nothing, they are only used make the code easier to understand.
