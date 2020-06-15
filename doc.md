@@ -191,7 +191,7 @@ for(i = 0, i < 10, i = i + 1)
 }
 ```
 
-Here is how a __for loop works__:
+Here is how a __for loop__ work:
 ```
 for(init variable, condition, incrementation)
 {
