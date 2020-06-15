@@ -4,6 +4,11 @@
 ###### June 2020  
 ###### Written by Samuel Gauthier
 
+### 0. Installation
+
+First go the the official Dragon website and download the last version of Dragon in the download section. At the moment of writing these lines (June 2020) the last version of Dragon is the version 1.9.7. 
+https://dragon-lang.org/dragon-197
+
 ### 1. Comments
 In Dragon, comments are ignored during the execution of the program. They do nothing, they are only used make the code easier to understand.
 ```
