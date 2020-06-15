@@ -2,7 +2,7 @@
 
 ## Documentation
 ###### June 2020  
-###### ritten by Samuel Gauthier
+###### Written by Samuel Gauthier
 
 ### 1. Comments
 In Dragon, comments are ignored during the execution of the program. They do nothing, they are only used make the code easier to understand.
