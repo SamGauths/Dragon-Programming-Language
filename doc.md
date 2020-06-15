@@ -24,6 +24,10 @@ Once you have done all these steps you are ready to code in Dragon. You can code
 If you need more ressources to get started you can refer to the official documentation here:  
 https://dragon-lang.org/Dragon.pdf  
 
+You can also join the facebook group:  
+https://www.facebook.com/groups/2374006629521294/  
+
+
 ### 1. Comments
 In Dragon, comments are ignored during the execution of the program. They do nothing, they are only used make the code easier to understand.
 ```
